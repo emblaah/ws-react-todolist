@@ -36,12 +36,14 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <div className="heading">
-        <h1>To-Do List</h1>
-      </div>
-      <InputArea onAdd={addItem} />
+    <div className="">
       <div>
+        <h1 className="text-2xl">To-Do List</h1>
+      </div>
+      <div>
+        <InputArea onAdd={addItem} />
+      </div>
+      <div className="">
         <ul>
           {items.map((todoItem) => (
             <ToDoItem

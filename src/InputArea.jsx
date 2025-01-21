@@ -8,9 +8,9 @@ export default function InputArea(props) {
   }
 
   return (
-    <div className="form">
-      <input onChange={handleChange} type="text" value={inputText} />
-      <button
+    <div className="flex justify-between">
+      <input className="bg-slate-300 outline outline-blue-400 rounded " onChange={handleChange} type="text" value={inputText} />
+      <button className="text-white"
         onClick={() => {
           props.onAdd(inputText);
           setInputText("");
