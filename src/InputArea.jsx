@@ -7,17 +7,29 @@ export default function InputArea(props) {
     setInputText(event.target.value);
   }
 
+  function handleKeyDown(event) {
+    if (event.key === "Enter") {
+      handleAdd();
+    }
+  }
+
+  function handleAdd() {
+    props.onAdd(inputText);
+    setInputText("");
+  }
+
   return (
-    <div className="flex justify-between">
-      <input className="bg-slate-300 outline outline-blue-400 rounded " onChange={handleChange} type="text" value={inputText} />
-      <button className="text-white"
-        onClick={() => {
-          props.onAdd(inputText);
-          setInputText("");
-        }}>
-        <span>Add</span>
+    <div className="w-full flex justify-between p-2">
+      <input
+        className="bg-slate-300 outline-1 outline-black rounded text-black "
+        onChange={handleChange}
+        onKeyDown={handleKeyDown}
+        type="text"
+        value={inputText}
+      />
+      <button className="text-white p-2" onClick={handleAdd}>
+        Add
       </button>
     </div>
   );
 }
-
