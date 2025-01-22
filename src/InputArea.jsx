@@ -19,7 +19,7 @@ export default function InputArea(props) {
   }
 
   return (
-    <div className="w-full flex justify-between p-2">
+    <div className="w-full flex justify-between p-2 border-b-4">
       <input
         className="bg-slate-300 outline-1 outline-black rounded text-black "
         onChange={handleChange}

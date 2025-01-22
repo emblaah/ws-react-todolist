@@ -36,14 +36,14 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col items-center w-full border bg-gray-100 min-h-[500px] max-w-[500px] min-w-[250px] rounded-xl shadow-lg">
+    <div className="flex flex-col items-center w-full bg-gray-100 min-h-[500px] max-w-[500px] min-w-[250px] rounded-xl shadow-lg">
       <div className="p-4 flex flex-col justify-center items-center">
         <h1 className="box-decoration-clone bg-gradient-to-r from-yellow-600 to-blue-500 text-white px-2 rounded-lg shadow-md">
           To-Do List
         </h1>
       </div>
       <InputArea onAdd={addItem} />
-    
+
       <div className="flex flex-col w-full">
         <ul>
           {items.map((todoItem) => (
